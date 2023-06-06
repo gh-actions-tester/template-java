@@ -39,7 +39,7 @@ jobs:
           npm install junit2json
 
       - name: Convert JUnitXML to JSON
-        run: npx junit2json -p target/surefire-reports/TEST-*.xml > test-output.json
+        run: npx junit2json -p test-output.xml > test-output.json
 
       - name: Update Firestore with Test Results
         run: |
